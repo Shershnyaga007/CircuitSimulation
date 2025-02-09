@@ -18,8 +18,8 @@ public class ExportExample : IExample
             
         circuit.InitializeState();
 
-        var XYExporter = new XYExporter("CapacitorVoltage/");
-        var ExcelExporter = new ExcelExporter("CapacitorVoltage/CapacitorVoltage.xlsx");
+        var xYExporter = new XYExporter("CapacitorVoltage/");
+        var excelExporter = new ExcelExporter("CapacitorVoltage/CapacitorVoltage.xlsx");
         var pngExporter = new PngExporter("CapacitorVoltage/", 1000, 1000);
             
         pngExporter.Plt.Title("Capacitor Voltage");
@@ -36,10 +36,10 @@ public class ExportExample : IExample
         pngExporter.Add("Capacitor", voltages);
         pngExporter.Export();
             
-        XYExporter.Add("Capacitor", voltages);
-        XYExporter.Export();
+        xYExporter.Add("Capacitor", voltages);
+        xYExporter.Export();
             
-        ExcelExporter.Add("Capacitor", voltages);
-        ExcelExporter.Export();
+        excelExporter.Add("Capacitor", voltages);
+        excelExporter.Export();
     }
 }
